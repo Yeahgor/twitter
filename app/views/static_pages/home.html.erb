@@ -1,4 +1,14 @@
-<% provide(:title, "Main page") %>
-<h1>Добро пожаловать в TWITTER by Yeahgor</h1>
-<p> HOME страница этого проекта.</p>
-<p>Find me in app/views/static_pages/home.html.erb</p>
+<% provide(:title, "Главная") %>
+<div class="center jumbotron">
+  <h1>Добро пожаловать в Twitter!</h1>
+
+  <h2>
+    это домашняя страница для социальной сети <a href="http://web.method.kz/">
+    курса по Ruby on Rails</a>
+    sample application.
+  </h2>
+
+  <%= link_to "Регистрация", signup_path, class: "btn btn-lg btn-primary" %>
+  <%= link_to image_tag("rails.png", alt: "Rails logo"), 'http://rubyonrails.org/' %>
+
+</div>
