@@ -1,22 +1,21 @@
-<% provide(:title, 'Регистрация') %>
+% provide(:title, 'Sign up') %>
 <h1>Форма регистрации пользователя в нашем проекте</h1>
 
 <div class="row">
-  <div class="col-md-5 col-md-offset-2">
-
+  <div class="col-md-6 col-md-offset-3">
     <%= form_for(@user) do |f| %>
-    <%= render 'shared/error_messages' %>
-      <%= f.label :name, "Придумайте логин"%>
-      <%= f.text_field :name %>
+      <%= render 'shared/error_messages', object: f.object %>
+      <%= f.label :name, "Ваше имая на проекте" %>
+      <%= f.text_field :name, class: 'form-control' %>
 
-      <%= f.label :email, "Адрес вашей электронной почты" %>
-      <%= f.text_field :email %>
+    <%= f.label :email, "Ваш реальный e-mail" %>
+      <%= f.text_field :email, class: 'form-control' %>
 
-      <%= f.label :password, "Пароль" %>
-      <%= f.password_field :password %>
+      <%= f.label :password, "Придумайте пароль" %>
+      <%= f.password_field :password, class: 'form-control' %>
 
-      <%= f.label :password_confirmation, "Подтверждение пароля" %>
-      <%= f.password_field :password_confirmation %>
+      <%= f.label :password_confirmation, "Попробуйте вспомнить придуманный выше пароль" %>
+      <%= f.password_field :password_confirmation, class: 'form-control' %>
 
       <%= f.submit "Нажав на эту кнопку вы безвозмездно вручаете в наши лапы свою информацию", class: "btn btn-primary" %>
     <% end %>
