@@ -1,0 +1,19 @@
+<% provide(:title, "Sign in") %>
+<h1>Заходите не стесняйтесь!</h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(:session, url: sessions_path) do |f| %>
+
+      <%= f.label :email, "Адрес вашей почты, онже логин в наш проект" %>
+      <%= f.text_field :email %>
+
+      <%= f.label :password, "Пароль, если забыли - вспоминайте" %>
+      <%= f.password_field :password %>
+
+      <%= f.submit "Добро пожаловать на нашу дискотеку!", class: "btn btn-primary" %>
+    <% end %>
+
+    <p>Ещё на с нами? <%= link_to "Быренько на регистрацию там все просто", signup_path %></p>
+  </div>
+</div>
